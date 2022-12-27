@@ -115,7 +115,7 @@ for (let i = 0; i < like.length; i++) {
 }
 
 // fa-heart color***********************************
-
+let msg = document.getElementsByClassName('msg')[0].value
 // form validation 
 let submit = document.getElementsByClassName("button-contact")
 for (let i = 0; i < submit.length; i++) {
@@ -123,34 +123,58 @@ for (let i = 0; i < submit.length; i++) {
     let name = document.getElementsByClassName('name')[i].value
     let email = document.getElementsByClassName('email')[i].value
     let message = document.getElementsByClassName('message')[i].value
+    
+    
 
-
-    if (name == "") {
+   if (name == "" && email == "" && message == ""){
       document.getElementsByClassName('name')[i].style.border = "2px solid red"
+      document.getElementsByClassName('email')[i].style.border = "2px solid red"
+      document.getElementsByClassName('message')[i].style.border = "2px solid red"
+      document.getElementsByClassName('msg')[0].style.visibility = "visible"
+      document.getElementsByClassName('msg')[0].value= "Please Enter name , email , message"
+    
+   } else{
+
+     if (name == "") {
+      document.getElementsByClassName('name')[i].style.border = "2px solid red"
+      document.getElementsByClassName('msg')[0].style.visibility = "visible"
+      document.getElementsByClassName('msg')[0].value = "Please Enter name"
+       
+     
 
     }
     else {
       document.getElementsByClassName('name')[i].style.border = "2px solid black"
+      document.getElementsByClassName('msg')[0].style.visibility = "hidden"
+      
+      
+    }
+
+   
+    if (message == "") {
+      document.getElementsByClassName('message')[i].style.border = "2px solid red"
+      document.getElementsByClassName('msg')[0].style.visibility = "visible"
+      document.getElementsByClassName('msg')[0].value = "Please Enter message"
+    }
+    else {
+      document.getElementsByClassName('message')[i].style.border = "2px solid black"
+      document.getElementsByClassName('msg')[0].style.visibility = "hidden"
     }
 
     if (email == "") {
       document.getElementsByClassName('email')[i].style.border = "2px solid red"
+      document.getElementsByClassName('msg')[0].style.visibility = "visible"
+      document.getElementsByClassName('msg')[0].value = "Please Enter email"
+      
     }
     else {
       document.getElementsByClassName('email')[i].style.border = "2px solid black"
+      document.getElementsByClassName('msg')[0].style.visibility = "hidden"
     }
-    if (message == "") {
-      document.getElementsByClassName('message')[i].style.border = "2px solid red"
-    }
-    else {
-      document.getElementsByClassName('message')[i].style.border = "2px solid black"
-    }
+  }
+  })}
 
 
-
-  })
-
-}
 
 
 // form validation**********************************

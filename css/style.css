@@ -86,7 +86,7 @@ body { background: var(--white); }
 .nav-logo h1{
   font-size: large;
   font-family: 'Lobster', cursive;
-  color:black;
+  color:#dc3545;
 
 
 }
@@ -113,7 +113,7 @@ body { background: var(--white); }
   
 }
 .nav-item a:hover{
-  color: rgb(2, 2, 2); 
+  color: #dc3545; 
   font-weight: 700;
 }
 .nav-login{
@@ -192,7 +192,7 @@ body { background: var(--white); }
 
   width: 40vw;
   
-  height:auto;
+  height: auto;
   /* border: 1px solid; */
    visibility: hidden; 
   position: fixed;
@@ -202,6 +202,7 @@ body { background: var(--white); }
  flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: center;
   padding: 10px;
   
   right: 1%;
@@ -209,8 +210,30 @@ body { background: var(--white); }
   z-index: 99999999999999999;
   background-color:#f1f3f8;
   box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.486);
-  overflow: auto;
+  scroll-padding: 0;
 
+}
+.bord{
+  border: 2px solid #df4252;
+}
+table {
+    border: 2px solid #df4252;
+    width:35vw ;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+   align-items: flex-start;
+   justify-items: flex-start;
+   border-radius: 10px;
+    background-color:#cacacc;
+   box-shadow: 1px 1px 2px 0 rgba(0,0, 0, 0.486);
+   margin-left: -0.2cm;
+}
+.td {
+  border-right: 2px solid #df4252;
+  height: 30px;
+  width: calc(30vw/5);
+  
 }
 .item{
   display: flex;
@@ -241,6 +264,7 @@ height: 80px;
   width: 40px;
   height: 30px;
   text-align: center;
+  font-weight: bold;
 }
 .item h5{
   /* border: 1px solid; */
@@ -342,10 +366,7 @@ b{
 .home-slider img{
   height: 24vh;
   width: 20vw;
-  border-radius:5px ;
-  border: 1px solid;
-  
-  
+  border-radius:5px ; 
 }
 .product{
   display: flex;
@@ -806,6 +827,22 @@ padding-left: 7px;
 
 }
 /* Contact */
+
+.msg{
+  visibility: hidden;
+  text-align: center;
+  padding-bottom: 20px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-style: italic;
+  font-weight: bold;
+ width: 20vw;
+ color: red;
+ /* border: 1px solid; */
+}
+
+
 
 .contact{
  display: flex;
