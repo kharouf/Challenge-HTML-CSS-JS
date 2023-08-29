@@ -78,7 +78,7 @@ body { background: var(--white); }
   gap: 10px;
   width: 12vw;
   outline: none;
-  
+  width: auto;
   /* border: 1px solid black; */
   /* animation: mymove 5s infinite; */
 
@@ -303,7 +303,7 @@ height: 80px;
 .home-slider-search{
   background-color: rgb(136, 134, 134);
   height: 26vh;
-  width: 70vw;
+  width: 80vw;
   border-radius: 10px;
   /* border: 1px solid black; */
   display: flex;
